@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net6.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <BuiltInComInteropSupport>true</BuiltInComInteropSupport>
+        <ApplicationManifest>app.manifest</ApplicationManifest>
+        <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
+    </PropertyGroup>
+
+
+    <ItemGroup>
+        <PackageReference Include="Avalonia" Version="11.0.6"/>
+        <PackageReference Include="Avalonia.Desktop" Version="11.0.6"/>
+        <PackageReference Include="Avalonia.Themes.Fluent" Version="11.0.6"/>
+        <PackageReference Include="Avalonia.Fonts.Inter" Version="11.0.6"/>
+        <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
+        <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="11.0.6"/>
+    </ItemGroup>
+
+
+    <ItemGroup>
+      <None Remove="Imagenes\fondo.png" />
+      <AvaloniaResource Include="Imagenes\fondo.png" />
+      <None Remove="Imagenes\fondo2.png" />
+      <AvaloniaResource Include="Imagenes\fondo2.png" />
+      <None Remove="Imagenes\imagen1.jpg" />
+      <AvaloniaResource Include="Imagenes\imagen1.jpg" />
+      <None Remove="Imagenes\imagen2.jpg" />
+      <AvaloniaResource Include="Imagenes\imagen2.jpg" />
+      <None Remove="Imagenes\imagen3.jpg" />
+      <AvaloniaResource Include="Imagenes\imagen3.jpg" />
+      <None Remove="Imagenes\logo.jpg" />
+      <AvaloniaResource Include="Imagenes\logo.jpg" />
+      <None Remove="Imagenes\logo.png" />
+      <AvaloniaResource Include="Imagenes\logo.png" />
+      <None Remove="Imagenes\porDefecto.jpg" />
+      <AvaloniaResource Include="Imagenes\porDefecto.jpg" />
+    </ItemGroup>
+</Project>

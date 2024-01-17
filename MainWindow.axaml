@@ -1,0 +1,57 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="650"
+        
+        x:Class="AvaloniaApplication4.MainWindow"
+        Title="ProyectoAvalonia">
+    <Window.Styles>
+        <Style Selector="Window">
+            <Setter Property="Background">
+                <ImageBrush Source="Imagenes/fondo.png"/>
+            </Setter>
+        </Style>
+    </Window.Styles>
+        <Grid Background="SteelBlue"
+              ColumnDefinitions="*,*,*,*,*"
+              RowDefinitions="*,*,*,*,*,*,*,*">
+        
+          
+            <Image Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Width="100" Height="100" Source="Imagenes/logo.png" Name="Logo"/>
+            <TextBlock HorizontalAlignment="Center" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Text="DATOS PERSONALES" ></TextBlock>
+           <TextBlock HorizontalAlignment="Right" Grid.Row="2" Grid.Column="0">Nombre:</TextBlock>
+         <TextBox  VerticalAlignment="Top" Width="150" Height="7" Grid.Row="2" Grid.Column="1" Name="TxtNombre" />
+        <TextBlock  HorizontalAlignment="Right"  Grid.Row="3" Grid.Column="0"  >Apellido:</TextBlock>
+        <TextBox VerticalAlignment="Top" Width="150" Height="7" Grid.Row="3" Name="TxtApellido" Grid.Column="1"/>
+        <TextBlock HorizontalAlignment="Right" Grid.Row="4" Grid.Column="0">Telefono:</TextBlock>
+        <TextBox VerticalAlignment="Top" Height="7"  Width="150"  Grid.Row="4" Grid.Column="1" Name="TxtTelefono"/>
+        <TextBlock HorizontalAlignment="Right" Grid.Row="5" Grid.Column="0">Género:</TextBlock>
+        <TextBox VerticalAlignment="Top" Height="7"  Width="50"  Grid.Row="5" Grid.Column="1" Name="TxtGenero"/>
+            <TextBlock Grid.Row="1" Grid.Column="3"  >Tipo:</TextBlock>
+            <CheckBox Grid.Row="1" VerticalAlignment="Top" Grid.Column="4" IsChecked="False" Name="CbManicura" Click="CbManicura_CheckedChanged">Manicura</CheckBox>
+            <CheckBox Grid.Row="2" VerticalAlignment="Top" Grid.Column="4" IsChecked="False" Name="CbPintar" Click="CbPedicura_CheckedChanged">Pintar uñas</CheckBox>
+            <TextBlock Grid.Row="3" Grid.Column="3"  >Imagen:</TextBlock>
+            <Button Grid.Row="4" Grid.Column="3" Click="FunExaminarImagen" Name="BtnExaminar">Examinar Imagen</Button>
+            <Image Grid.Row="3" Grid.Column="4"  Width="110" Height="110" Source="Imagenes/porDefecto.jpg" Name="ImagenUnas"/>
+            <TextBlock HorizontalAlignment="Center"  VerticalAlignment="Center" Grid.Row="0" Grid.Column="3" Grid.ColumnSpan="2"  >SERVICIOS</TextBlock>
+            <TextBlock Grid.Row="5" Grid.Column="3" >Precio:</TextBlock>
+            <TextBox HorizontalAlignment="Left" VerticalAlignment="Top" Height="7" Width="50" Grid.Row="5" Grid.Column="4" Name="TxtPrecio"  />
+            <TextBlock HorizontalAlignment="Center" Grid.Row="6" Grid.Column="2"  >Registros:</TextBlock>
+            <TextBox HorizontalAlignment="Center" VerticalAlignment="Top" Height="7" Width="50" Grid.Row="7" Grid.Column="2" Name="TxtRegistros" />
+            <Button HorizontalAlignment="Center" Grid.Row="6" Grid.Column="0" Click="FunAnterior"  Name="BtnAnterior">Anterior</Button>
+            <Button HorizontalAlignment="Center" Grid.Row="6" Grid.Column="4" Click="FunSiguiente"  Name="BtnSiguiente">Siguiente</Button>
+            <Button HorizontalAlignment="Center" Grid.Row="6" Grid.Column="1" Click="FunGuardar"  Name="BtnGuardar">Guardar</Button>
+            <Button HorizontalAlignment="Center" Grid.Row="7" Grid.Column="1" Click="FunModificar"  Name="BtnModificar">Modificar</Button>
+            <Button HorizontalAlignment="Center" Grid.Row="6" Grid.Column="3" Click="FunEliminar"  Name="BtnEliminar" >Eliminar</Button>
+            <Button HorizontalAlignment="Center" Grid.Row="7" Grid.Column="3" Click="FunNuevo" Name="BtnNuevo">Nuevo</Button>
+            <Button HorizontalAlignment="Center" Grid.Row="7" Grid.Column="4" Click="FunAceptar" Name="BtnAceptar">Aceptar</Button>
+            <Button HorizontalAlignment="Center" Grid.Row="7" Grid.Column="0" Click="FunCancelar" Name="BtnCancelar">Cancelar</Button>
+
+            
+            
+            
+        </Grid>
+        
+</Window>
+
